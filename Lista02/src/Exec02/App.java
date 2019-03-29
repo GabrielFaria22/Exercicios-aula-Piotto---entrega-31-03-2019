@@ -22,11 +22,17 @@ public class App {
 
 	}
 		//metodo para adicionar o pais p3 a lista de paises que fazem fronteira com p2
-		p2.adicionar(p3);
+		//p1.adicionar(p3); //nao funciona
 		/*
 		//metodo para mostrar a lista de paises que fazem fronteira com p2
 		p2.mostrarpaisescomfronteira();
 	*/
+		
+		//p1.mostrarpaisescomfronteira(); nao funciona tbm
+		
+		//p1.retornaPais(); tbm nao funciona
+		
+		//p1.efronteirasimounao(p3); nao funciona
 
 }
 }

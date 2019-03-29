@@ -31,15 +31,17 @@ public class Pais {
 	
 	public void adicionar(Pais p) {
 		
-		if(paisigual(p)==true)
+		if(paisigual(p)==true) {
 			return;
+		}
+			
 		
 		int posicao=0;
 		
-		while(this.fronteiras[posicao] !=0) {
+		while(fronteiras[posicao] !=null) {
 			posicao++;
 		}
-		this.fronteiras[posicao]=p;
+		fronteiras[posicao]=p;
 	}
 	
 	public void mostrarpaisescomfronteira() {
@@ -53,39 +55,12 @@ public class Pais {
 	
 	
 	
-	/*
-	public void addpaiscomfronteira(String paisescomfronteira[]) {
-		boolean pode;
-		String paisnovo=new String();
-		
-		do {
-		System.out.println("qual pais deseja adicionar?");
-		
-		paisnovo=leitor.nextLine();
-				
-		for(int repet = 0;repet<=20;repet++) {
-			if(paisnovo==paisescomfronteira[repet]) {
-				pode=false;
-			}else {
-				pode=true;
-			}
-		}
-		if(pode=false) {
-			System.out.println("pais ja existente");
-		}else {
-			System.out.println("pais adicionado");
-		}
-		}while(pode=false);
-			
-			
-	}
-	*/
 	
-	
-	public void retornaPais(Pais p1) {
-		
-		for(int repet=0;repet<=20;repet++) {
-			System.out.println(p1.paisescomfronteira[repet]);
+	public void retornaPais() {
+		int repet=0;
+		while(this.fronteiras[repet]!=null) {
+			System.out.println(this.fronteiras[repet]);
+			repet++;
 		}
 	}
 	
@@ -93,7 +68,7 @@ public class Pais {
 		int posicao=0,repet;
 		boolean eounao = false;
 		
-		for(repet=0;repet<=20;repet++) {
+		
 			while(fronteiras[posicao]!=null) {
 				if(p1.fronteiras[posicao]!=this) {
 					eounao=false;
@@ -101,7 +76,7 @@ public class Pais {
 					eounao=true;
 				}
 		}
-		}
+		
 		return eounao;
 	}
 	
