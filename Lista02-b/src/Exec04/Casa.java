@@ -26,7 +26,7 @@ public class Casa {
 		int qtsportas=0,repet=0;
 		while(this.porta[repet]!=null) {
 			if(this.porta[repet].aberta=true) {
-				qtsportas=qtsportas+1;
+				qtsportas++;
 			}
 			repet++;
 		}
