@@ -1,35 +1,39 @@
 package Exec04;
 
 public class Casa {
-	
-	public Porta[] porta=new Porta[3];
-	public String cor=new String();
-	
-	public Casa(){
-		this.porta[0]=porta[0];
-		this.porta[1]=porta[1];
-		this.porta[2]=porta[2];
-		this.cor=cor;
-		this.cor=cor;
-	}
-	
 
-
-	public void pinta(String cornova) {
-		this.cor=cornova;
-		System.out.println("a casa foi pintada de "+cornova);
+	public String cor;
+	public Porta[] portas = new Porta[90];
+	
+	public void Pinta(String s) {
+		cor = s;
 	}
-	public int totalDePortas() {
-		return porta.length;
-	}
+	
 	public int quantasPortasEstaoAbertas() {
-		int qtsportas=0,repet=0;
-		while(this.porta[repet]!=null) {
-			if(this.porta[repet].aberta=true) {
-				qtsportas++;
+		
+		int t = 0, i = 0;
+		
+		while (portas[i] != null) {
+			if (portas[i].estaAberta()) {
+				t++;
 			}
-			repet++;
+			i++;
 		}
-		return qtsportas;
+		
+		return t;
+		
 	}
+	
+	public int totalDePortas() {
+		
+		int t = 0;
+		
+		while (portas[t] != null) {
+			t++;
+		}
+		
+		return t;	
+		
+	}
+	
 }

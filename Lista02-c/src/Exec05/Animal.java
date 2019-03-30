@@ -14,8 +14,5 @@ public class Animal {
 		System.out.println("caminhando");
 	}
 	
-	
-	
-	
 
 }

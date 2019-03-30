@@ -5,60 +5,34 @@ import java.util.Scanner;
 
 
 public class App {
+
 	public static void main(String[] args) {
 		
-		//criando porta
-		Porta p =new Porta();
-		Porta p2=new Porta();
-		p2.x=1.9;
-		p2.y=1.25;
-		p2.z=0.08;
-		Porta p3=new Porta();
-		p3.x=1.9;
-		p3.y=1.25;
-		p3.z=0.08;
+		Casa c1 = new Casa();
 		
-		p.abre();
-		p.fecha();
-		p.pinta("azul");
-		p.x=1.9;
-		p.y=1.25;
-		p.z=0.08;
-		if(p.estaAberta()) {
-			System.out.println("porta esta aberta");
-		}else {
-			System.out.println("porta esta fechada");
-		}
+		Porta p1 = new Porta();
+		p1.dimensaoX = 0.7;
+		p1.dimensaoY = 1.2;
+		p1.dimensaoZ = 0.04;
 		
-		//criando casa
-		Casa c=new Casa();
+		Porta p2 = new Porta();
+		p2.dimensaoX = 0.9;
+		p2.dimensaoY = 1.4;
+		p2.dimensaoZ = 0.07;
 		
-		c.pinta("vermelho");
-		c.porta[0]=p;
-		c.porta[1]=p2;
-		c.porta[2]=p3;
-		c.porta[0].abre();
-		//System.out.println(c.quantasPortasEstaoAbertas());
-		System.out.println(c.totalDePortas());
+		Porta p3 = new Porta();
+		p3.dimensaoX = 1;
+		p3.dimensaoY = 1.6;
+		p3.dimensaoZ = 0.2;
 		
-		//criando edificio
-		Edificio e=new Edificio();
+		c1.portas[0] = p1;
+		c1.portas[1] = p2;
+		c1.portas[2] = p3;
 		
-		e.pinta("branco");
-		
-		int repet=0;
-		for(repet=0;repet<=4;repet++) {
-			e.adicionaPorta(e.porta[repet]);
-		}
+		c1.portas[2].abre();
 		
 		
-		e.abrirPorta(e.porta[0]);
-		
-		System.out.println(e.quantasPortasEstaoAbertas());
 		
 	}
-	
-	
-	
 
 }

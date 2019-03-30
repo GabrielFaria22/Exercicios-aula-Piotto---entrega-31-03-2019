@@ -4,49 +4,52 @@ import java.util.Scanner;
 
 public class Edificio {
 	
-	Andar[] andares=new Andar[1000];
 	public String cor;
-	
+	public Andar[] andares = new Andar[300];
 	
 	public void pinta(String s) {
-		cor=s;
+		cor = s;
 	}
 	
 	public int totalDeAndares() {
-		int t=0;
-		while(andares[t]!=null) {
+		
+		int t = 0;
+		
+		while (andares[t] != null)
 			t++;
-		}
+		
 		return t;
 	}
 	
 	public void adicionarAndar(int total) {
 		
-		Andar a=new Andar();
-		
-		for(int i=0;i<total;i++) {
+		Andar a = new Andar();
+				
+		for(int i = 0; i < total; i++) {
 			
 			Porta p = new Porta();
 			
-			a.porta[i]=p;
+			a.porta[i] = p;
 		}
-		int indice=0;
-		while(andares[indice]!=null) {
+		
+		int indice = 0;
+		while (andares[indice] != null)
 			indice++;
-		}
-		andares[indice]=a;
+			
+		andares[indice] = a;
+		
 	}
 	
 	public int totalDePortas() {
-		int indice=0;
-		int total=0;
-		while(andares[indice]!=null) {
-			total+=andares[indice].totalDePortas();
-		}
+		
+		int indice = 0;
+		int total = 0;
+		
+		while (andares[indice] != null)
+			total += andares[indice].totalDePortas();
+		
 		return total;
+		
 	}
-	
-	
-	
 	
 }
