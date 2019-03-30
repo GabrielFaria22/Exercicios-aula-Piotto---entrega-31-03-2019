@@ -27,9 +27,13 @@ public class Porta {
 		System.out.println("Porta fechada com sucesso");
 	}
 	
-	void pinta(String s) {
+	public void pinta(String s) {
 		this.cor=s;
 		System.out.println("a porta foi pintada de " +s);
+	}
+	
+	public boolean estaAberta(){
+		return aberta;
 	}
 	
 	

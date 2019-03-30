@@ -34,8 +34,6 @@ public class Pais {
 		if(paisigual(p)==true) {
 			return;
 		}
-			
-		
 		int posicao=0;
 		
 		while(fronteiras[posicao] !=null) {
